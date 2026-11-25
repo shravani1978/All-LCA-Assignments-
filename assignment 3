@@ -1,1 +1,62 @@
-
+#include<stdio.h>
+int main()
+{
+    long long a;
+    long long b;
+    int c;
+    
+    printf("Enter the value of a :");
+    if(scanf("%lld",&a)!=1)
+    {
+     printf("Invalid input for a!\n");
+    return 0;
+    }
+    
+    printf("Enter the value of b:");
+    if(scanf("%lld",&b)!=1)
+    {
+     printf("Invalid input for b!\n");
+     return 0;
+    }
+    
+    
+    printf("1.Addition\n");
+    printf("2.Subtraction\n");
+    printf("3.Multiplication\n");
+    printf("4.Division\n");
+    
+    printf("Enter your choice : ");
+    scanf("%d",&c);
+    
+    switch(c)
+    {
+        case 1:
+        printf("Addition of a and b is : %lld\n",a+b);
+        break;
+        
+        case 2:
+        printf("Subtractio of a and b is : %lld\n",a-b);
+        break;
+        
+        case 3:
+        printf("Multiplication of a and b is : %lld\n",a*b);
+        break;
+        
+        case 4:
+        if(b==0)
+        {
+        printf("Error:Division by zero is not possible.\n");
+        }
+        else
+        {
+         printf("Division of a and b is : %3f\n",(float)a/b);
+        }
+         break;
+         //division by zero is not handled in this code 
+         
+         defaulf:
+         printf("Invalid choice\n");
+         
+         }
+         return 0;
+        }
